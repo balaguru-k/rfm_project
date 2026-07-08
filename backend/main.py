@@ -286,3 +286,6 @@ CRITICAL RULES:
         raise HTTPException(status_code=503, detail="Cannot connect to Ollama. Make sure Ollama is running (ollama serve).")
     except requests.exceptions.RequestException as e:
         raise HTTPException(status_code=503, detail=f"Ollama error: {str(e)}")
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=5000, reload=True)
