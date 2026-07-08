@@ -268,7 +268,7 @@ CRITICAL RULES:
 
     try:
         response = requests.post(
-            "http://localhost:11434/api/chat",
+            "http://host.docker.internal:11434/api/chat",
             json={
                 "model": "phi4-mini",
                 "messages": messages,
